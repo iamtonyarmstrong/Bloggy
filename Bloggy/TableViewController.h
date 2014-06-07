@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 @class BlogPost;
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,strong)NSArray *titles;
-@property (nonatomic,strong)NSArray *blogPosts;
+@property (nonatomic,strong)NSMutableArray *blogPosts;
+@property (nonatomic,strong)BlogPost *postsObject;
 
 @end
