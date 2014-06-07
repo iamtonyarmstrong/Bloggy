@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "BlogPost.h"
+#import "BlogPostsContainer.h"
 
 @interface TableViewController ()
 
@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.postsObject = [[BlogPost alloc]initWithTitle:nil];
+    self.postsContainter = [[BlogPostsContainer alloc]initWithJson];
 
     
 
@@ -60,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.blogPosts count];
+    return 1;
 }
 
 
@@ -69,8 +69,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    cell.textLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.detailTextLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"author"];
+    //cell.textLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"title"];
+    //cell.detailTextLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"author"];
     
     return cell;
 }

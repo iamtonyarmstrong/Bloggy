@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BlogPost;
+@class BlogPostsContainer;
 
 @interface TableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,strong)NSArray *titles;
-@property (nonatomic,strong)NSMutableArray *blogPosts;
-@property (nonatomic,strong)BlogPost *postsObject;
+@property (nonatomic,strong)BlogPostsContainer *postsContainter;
 
 @end
