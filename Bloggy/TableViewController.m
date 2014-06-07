@@ -11,6 +11,7 @@
 
 @interface TableViewController ()
 
+@property (nonatomic,strong)NSArray *testDict;
 
 @end
 
@@ -21,7 +22,6 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-
     }
     return self;
 }
@@ -29,11 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.postsContainter = [[BlogPostsContainer alloc]initWithJson];
-
+    //_postsContainter = [[BlogPostsContainer alloc]init];
     
-
-
+    self.testDict = [[[BlogPostsContainer alloc]init] returnedPosts:[BlogPostsContainer getPosts]];
+    
 
 
     // Uncomment the following line to preserve selection between presentations.

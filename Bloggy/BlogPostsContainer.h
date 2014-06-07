@@ -11,14 +11,10 @@
 
 @interface BlogPostsContainer : NSObject
 
-@property (nonatomic,strong) NSString *title;
-@property (nonatomic,strong) NSString *author;
-@property (nonatomic,strong) NSDictionary *allBlogPosts;
-@property (nonatomic,strong) NSArray *posts;
-//@property (strong, nonatomic) Image *workingImage;
+@property (nonatomic,strong) NSDictionary *dataDictionary;
+@property (nonatomic,strong) NSArray *postObjects;
 
-//designated initializer
-- (instancetype) initWithJson;
+//@property (strong, nonatomic) Image *workingImage;
 
 //other initializers, but DON'T let devs call these...
 - (instancetype) init;
@@ -27,6 +23,7 @@
 + (NSDictionary *)getPosts;
 
 //public convenience methods
+- (NSArray *) returnedPosts:(NSDictionary *)thePosts;
 
 
 @end

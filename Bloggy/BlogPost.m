@@ -20,7 +20,7 @@
 @implementation BlogPost
 
 //designated initializer
-- (instancetype) initWithJson
+- (instancetype) initWithTitle:(NSString *)title
 {
     if(self = [super init]){
         //set up ivars and call the class method +(NSDictionary *)getPosts()...

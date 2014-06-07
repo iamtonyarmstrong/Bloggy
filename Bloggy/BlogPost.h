@@ -12,11 +12,14 @@
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *author;
+@property (nonatomic,strong) NSURL *postURL;
+@property (nonatomic,strong) NSURL *thumbnail;
+
 
 //@property (strong, nonatomic) Image *workingImage;
 
 //designated initializer
-- (instancetype) initWithJson;
+- (instancetype) initWithTitle:(NSString *)title;
 
 //other initializers, but DON'T let devs call these...
 - (instancetype) init;

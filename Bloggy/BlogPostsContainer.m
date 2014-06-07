@@ -7,6 +7,7 @@
 //
 
 #import "BlogPostsContainer.h"
+#import "BlogPost.h"
 
 
 @interface BlogPostsContainer ()
@@ -15,31 +16,18 @@
 
 @end
 
+
 @implementation BlogPostsContainer
 
-//designated initializer
-- (instancetype) initWithJson
+- (instancetype) init
 {
     if(self = [super init]){
-        //set up ivars and call the class method +(NSDictionary *)getPosts()...
-        if(!_allBlogPosts) _allBlogPosts = [BlogPostsContainer getPosts];
-    }
 
+    }
+    
     return self;
 }
 
-- (instancetype)init
-{
-    NSLog(@"here...");
-    @throw [NSException exceptionWithName:@"ImproperInitMethodUsed"
-                                   reason:@"Please use the designated initializer -(instancetype)initWithJson."
-                                 userInfo:nil];
-
-
-    //[myException raise]; /* equivalent to above directive */
-
-    return nil;
-}
 
 + (NSDictionary *)getPosts
 {
@@ -51,16 +39,26 @@
                                                                    options:0
                                                                      error:&error];
 
-    NSLog(@"%@", dataDictionary);
+    //NSLog(@"%@", dataDictionary);
     return dataDictionary;
 }
 
 - (NSArray *) returnedPosts:(NSDictionary *)thePosts
 {
-    self.posts = [NSArray array];
+    self.tempPosts = [NSMutableArray array];
+    NSDictionary *temp = [thePosts objectForKey:@"posts"];
+    for (NSDictionary *dict in temp){
+        NSString *title = [[NSString alloc]initWithString:[dict valueForKey:@"title"]];
 
+        BlogPost *p = [[BlogPost alloc]initWithTitle:title];
+        p.author = [dict valueForKey:@"author"];
+        p.postURL = [NSURL URLWithString:[dict valueForKey:@"url"]];
+        p.thumbnail = [NSURL URLWithString:[dict valueForKey:@"thumbnail"]];
+        [self.tempPosts addObject:p];
+    }
 
-    return self.posts;
+    self.postObjects = [self.tempPosts copy];
+    return self.postObjects;
 }
 
 @end
