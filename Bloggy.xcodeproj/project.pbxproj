@@ -12,7 +12,7 @@
 		9227B5B6193EC0DE0006B213 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9227B5B5193EC0DE0006B213 /* Images.xcassets */; };
 		9227B5C2193EC0DF0006B213 /* BloggyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227B5C1193EC0DF0006B213 /* BloggyTests.m */; };
 		9227B5CC193EC1110006B213 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */; };
-		922FD50E1943A1B600216D53 /* BlogPostsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FD50D1943A1B600216D53 /* BlogPostsContainer.m */; };
+		922FD5111943AA8600216D53 /* BlogPostsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FD5101943AA8600216D53 /* BlogPostsContainer.m */; };
 		92F371C31941381C00B99148 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C21941381C00B99148 /* TableViewController.m */; };
 		92F371C61941385100B99148 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C51941385100B99148 /* BlogPost.m */; };
 /* End PBXBuildFile section */
@@ -38,8 +38,8 @@
 		9227B5C0193EC0DF0006B213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9227B5C1193EC0DF0006B213 /* BloggyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloggyTests.m; sourceTree = "<group>"; };
 		9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		922FD50C1943A1B600216D53 /* BlogPostsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPostsContainer.h; path = ../BlogPostsContainer.h; sourceTree = "<group>"; };
-		922FD50D1943A1B600216D53 /* BlogPostsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogPostsContainer.m; path = ../BlogPostsContainer.m; sourceTree = "<group>"; };
+		922FD50F1943AA8600216D53 /* BlogPostsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsContainer.h; sourceTree = "<group>"; };
+		922FD5101943AA8600216D53 /* BlogPostsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostsContainer.m; sourceTree = "<group>"; };
 		92F371C11941381C00B99148 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		92F371C21941381C00B99148 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		92F371C41941385100B99148 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 		9227B5AD193EC0DE0006B213 /* Bloggy */ = {
 			isa = PBXGroup;
 			children = (
-				922FD50C1943A1B600216D53 /* BlogPostsContainer.h */,
-				922FD50D1943A1B600216D53 /* BlogPostsContainer.m */,
+				922FD50F1943AA8600216D53 /* BlogPostsContainer.h */,
+				922FD5101943AA8600216D53 /* BlogPostsContainer.m */,
 				92F371C11941381C00B99148 /* TableViewController.h */,
 				92F371C21941381C00B99148 /* TableViewController.m */,
 				9227B5B2193EC0DE0006B213 /* AppDelegate.h */,
@@ -226,7 +226,7 @@
 			files = (
 				9227B5B4193EC0DE0006B213 /* AppDelegate.m in Sources */,
 				9227B5B1193EC0DE0006B213 /* main.m in Sources */,
-				922FD50E1943A1B600216D53 /* BlogPostsContainer.m in Sources */,
+				922FD5111943AA8600216D53 /* BlogPostsContainer.m in Sources */,
 				92F371C31941381C00B99148 /* TableViewController.m in Sources */,
 				92F371C61941385100B99148 /* BlogPost.m in Sources */,
 			);
