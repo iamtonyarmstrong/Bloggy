@@ -12,7 +12,8 @@
 		9227B5B6193EC0DE0006B213 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9227B5B5193EC0DE0006B213 /* Images.xcassets */; };
 		9227B5C2193EC0DF0006B213 /* BloggyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227B5C1193EC0DF0006B213 /* BloggyTests.m */; };
 		9227B5CC193EC1110006B213 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */; };
-		9227B5CF193EC3980006B213 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227B5CE193EC3980006B213 /* TableViewController.m */; };
+		92F371C31941381C00B99148 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C21941381C00B99148 /* TableViewController.m */; };
+		92F371C61941385100B99148 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C51941385100B99148 /* BlogPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,10 @@
 		9227B5C0193EC0DF0006B213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9227B5C1193EC0DF0006B213 /* BloggyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloggyTests.m; sourceTree = "<group>"; };
 		9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9227B5CD193EC3980006B213 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
-		9227B5CE193EC3980006B213 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		92F371C11941381C00B99148 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		92F371C21941381C00B99148 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		92F371C41941385100B99148 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		92F371C51941385100B99148 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +82,15 @@
 		9227B5AD193EC0DE0006B213 /* Bloggy */ = {
 			isa = PBXGroup;
 			children = (
-				9227B5CD193EC3980006B213 /* TableViewController.h */,
-				9227B5CE193EC3980006B213 /* TableViewController.m */,
+				92F371C11941381C00B99148 /* TableViewController.h */,
+				92F371C21941381C00B99148 /* TableViewController.m */,
 				9227B5B2193EC0DE0006B213 /* AppDelegate.h */,
 				9227B5B3193EC0DE0006B213 /* AppDelegate.m */,
 				9227B5B5193EC0DE0006B213 /* Images.xcassets */,
 				9227B5AE193EC0DE0006B213 /* Supporting Files */,
 				9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */,
+				92F371C41941385100B99148 /* BlogPost.h */,
+				92F371C51941385100B99148 /* BlogPost.m */,
 			);
 			path = Bloggy;
 			sourceTree = "<group>";
@@ -215,8 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9227B5B4193EC0DE0006B213 /* AppDelegate.m in Sources */,
-				9227B5CF193EC3980006B213 /* TableViewController.m in Sources */,
 				9227B5B1193EC0DE0006B213 /* main.m in Sources */,
+				92F371C31941381C00B99148 /* TableViewController.m in Sources */,
+				92F371C61941385100B99148 /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +398,7 @@
 				9227B5C7193EC0DF0006B213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9227B5C8193EC0DF0006B213 /* Build configuration list for PBXNativeTarget "BloggyTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +407,7 @@
 				9227B5CA193EC0DF0006B213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "BlogPost.h"
 
 @interface TableViewController ()
 
@@ -27,14 +28,8 @@
 {
     [super viewDidLoad];
 
-    NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
-    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
 
-    NSError *error = nil;       //create a nil error object for use in the serialization method.
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                                   options:0
-                                                                     error:&error];
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+
 
 
     // Uncomment the following line to preserve selection between presentations.
