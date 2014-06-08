@@ -8,10 +8,11 @@
 
 #import "TableViewController.h"
 #import "BlogPostsContainer.h"
+#import "BlogPost.h"
 
 @interface TableViewController ()
 
-@property (nonatomic,strong)NSArray *testDict;
+@property (nonatomic,strong)NSArray *individualPosts;
 
 @end
 
@@ -31,9 +32,7 @@
     [super viewDidLoad];
     //_postsContainter = [[BlogPostsContainer alloc]init];
     
-    self.testDict = [[[BlogPostsContainer alloc]init] returnedPosts:[BlogPostsContainer getPosts]];
-    
-
+    self.individualPosts = [[[BlogPostsContainer alloc]init] returnedPosts:[BlogPostsContainer getPosts]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -59,7 +58,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [self.individualPosts count];
 }
 
 
@@ -68,8 +67,25 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    //cell.textLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"title"];
-    //cell.detailTextLabel.text = [[self.blogPosts objectAtIndex:indexPath.row] objectForKey:@"author"];
+    BlogPost *p = [self.individualPosts objectAtIndex:indexPath.row];
+    cell.textLabel.text = p.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", p.author, p.date];
+
+    //Get the image data from the URL in the BlogPost object
+    //Debugging - Use the line of code below to verify the class of the object in thumbnailURL
+    //
+    // NSLog(@"class of thumbnailURL: %@", p.thumbnailURL.class);
+    //
+    //Now, check the class of the thumbnail object. If it's what we expect,
+    //display the thumbnail, otherwise default to the backup image.
+
+    if([p.thumbnailURL.class isEqual:[NSURL class]]){
+        NSData *imageData = [NSData dataWithContentsOfURL:p.thumbnailURL];
+        cell.imageView.image = [[UIImage alloc] initWithData:imageData];
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"treehouse"];
+    }
+
     
     return cell;
 }

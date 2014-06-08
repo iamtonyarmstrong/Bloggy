@@ -24,6 +24,11 @@
 {
     if(self = [super init]){
         //set up ivars and call the class method +(NSDictionary *)getPosts()...
+        self.title = title;
+        self.thumbnailURL = nil;
+        self.postURL = nil;
+        self.author = nil;
+        self.date = nil;
     }
 
     return self;

@@ -13,7 +13,8 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *author;
 @property (nonatomic,strong) NSURL *postURL;
-@property (nonatomic,strong) NSURL *thumbnail;
+@property (nonatomic,strong) NSURL *thumbnailURL;
+@property (nonatomic,strong) NSString *date;
 
 
 //@property (strong, nonatomic) Image *workingImage;

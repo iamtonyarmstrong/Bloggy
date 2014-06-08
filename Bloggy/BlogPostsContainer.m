@@ -48,13 +48,15 @@
     self.tempPosts = [NSMutableArray array];
     NSDictionary *temp = [thePosts objectForKey:@"posts"];
     for (NSDictionary *dict in temp){
-        NSString *title = [[NSString alloc]initWithString:[dict valueForKey:@"title"]];
 
+        NSString *title = [[NSString alloc]initWithString:[dict valueForKey:@"title"]];
         BlogPost *p = [[BlogPost alloc]initWithTitle:title];
         p.author = [dict valueForKey:@"author"];
         p.postURL = [NSURL URLWithString:[dict valueForKey:@"url"]];
-        p.thumbnail = [NSURL URLWithString:[dict valueForKey:@"thumbnail"]];
+        p.thumbnailURL = [NSURL URLWithString:[dict valueForKey:@"thumbnail"]];
+        p.date = [dict valueForKey:@"date"];
         [self.tempPosts addObject:p];
+        
     }
 
     self.postObjects = [self.tempPosts copy];

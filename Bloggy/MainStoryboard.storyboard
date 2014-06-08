@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="ZDa-Lb-AXX" detailTextLabel="Azr-C6-zhD" style="IBUITableViewCellStyleSubtitle" id="ak6-Uo-fD7">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="ZDa-Lb-AXX" detailTextLabel="Azr-C6-zhD" imageView="yrb-2O-xe6" style="IBUITableViewCellStyleSubtitle" id="ak6-Uo-fD7">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ak6-Uo-fD7" id="jql-50-Y7I">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -30,6 +30,9 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="treehouse" id="yrb-2O-xe6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -45,6 +48,9 @@
             <point key="canvasLocation" x="649" y="477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="treehouse" width="215" height="234"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
