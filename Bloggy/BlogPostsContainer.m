@@ -54,7 +54,7 @@
         p.author = [dict valueForKey:@"author"];
         p.postURL = [NSURL URLWithString:[dict valueForKey:@"url"]];
         p.thumbnailURL = [NSURL URLWithString:[dict valueForKey:@"thumbnail"]];
-        p.date = [dict valueForKey:@"date"];
+        [p setDate:[dict valueForKey:@"date"]];
         [self.tempPosts addObject:p];
         
     }

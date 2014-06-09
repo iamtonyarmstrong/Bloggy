@@ -8,13 +8,6 @@
 
 #import "BlogPost.h"
 
-@interface BlogPost ()
-
-
-
-//self.blogPosts = [dataDictionary objectForKey:@"posts"];
-
-@end
 
 
 @implementation BlogPost
@@ -48,7 +41,18 @@
 }
 
 
+- (NSString *)createFormattedDate
+{
+    NSDate *date = [[NSDate alloc]init];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter localizedStringFromDate: dateStyle:<#(NSDateFormatterStyle)#> timeStyle:<#(NSDateFormatterStyle)#>];
+    [dateFormatter setDateStyle:NSDateFormatterNoStyle];
 
+    NSDate *dateFromString = [[NSDate alloc] init];
+    dateFromString = [dateFormatter dateFromString:self.date];
+
+    return [dateFormatter stringFromDate:dateFromString];
+}
 
 
 

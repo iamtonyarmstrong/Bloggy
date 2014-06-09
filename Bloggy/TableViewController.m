@@ -69,7 +69,7 @@
 
     BlogPost *p = [self.individualPosts objectAtIndex:indexPath.row];
     cell.textLabel.text = p.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", p.author, p.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", p.author, p.createFormattedDate];
 
     //Get the image data from the URL in the BlogPost object
     //Debugging - Use the line of code below to verify the class of the object in thumbnailURL
