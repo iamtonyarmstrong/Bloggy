@@ -14,7 +14,7 @@
 @property (nonatomic,strong) NSString *author;
 @property (nonatomic,strong) NSURL *postURL;
 @property (nonatomic,strong) NSURL *thumbnailURL;
-@property (nonatomic,strong, getter=createFormattedDate) NSString *date;
+@property (nonatomic,strong) NSString *date;
 
 //@property (strong, nonatomic) Image *workingImage;
 
@@ -24,6 +24,7 @@
 //other initializers, but DON'T let devs call these...
 - (instancetype) init;
 
+-(NSString *)createFormattedDate;
 
 
 

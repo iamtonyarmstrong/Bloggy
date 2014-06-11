@@ -21,7 +21,6 @@
         self.thumbnailURL = nil;
         self.postURL = nil;
         self.author = nil;
-        self.date = nil;
     }
 
     return self;
@@ -43,15 +42,12 @@
 
 - (NSString *)createFormattedDate
 {
-    NSDate *date = [[NSDate alloc]init];
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter localizedStringFromDate: dateStyle:<#(NSDateFormatterStyle)#> timeStyle:<#(NSDateFormatterStyle)#>];
-    [dateFormatter setDateStyle:NSDateFormatterNoStyle];
 
-    NSDate *dateFromString = [[NSDate alloc] init];
-    dateFromString = [dateFormatter dateFromString:self.date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date =[dateFormat dateFromString:self.date];
 
-    return [dateFormatter stringFromDate:dateFromString];
+    return [date description];
 }
 
 
