@@ -14,6 +14,7 @@
 		9227B5CC193EC1110006B213 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */; };
 		922FD5111943AA8600216D53 /* BlogPostsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 922FD5101943AA8600216D53 /* BlogPostsContainer.m */; };
 		922FD5131944951200216D53 /* treehouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 922FD5121944951200216D53 /* treehouse.jpg */; };
+		92C513FA194926E500C8AB96 /* THWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C513F8194926E500C8AB96 /* THWebViewController.m */; };
 		92F371C31941381C00B99148 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C21941381C00B99148 /* TableViewController.m */; };
 		92F371C61941385100B99148 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F371C51941385100B99148 /* BlogPost.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,8 @@
 		922FD50F1943AA8600216D53 /* BlogPostsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsContainer.h; sourceTree = "<group>"; };
 		922FD5101943AA8600216D53 /* BlogPostsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostsContainer.m; sourceTree = "<group>"; };
 		922FD5121944951200216D53 /* treehouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = treehouse.jpg; path = ../../../../Desktop/treehouse.jpg; sourceTree = "<group>"; };
+		92C513F7194926E500C8AB96 /* THWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THWebViewController.h; sourceTree = "<group>"; };
+		92C513F8194926E500C8AB96 /* THWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THWebViewController.m; sourceTree = "<group>"; };
 		92F371C11941381C00B99148 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		92F371C21941381C00B99148 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		92F371C41941385100B99148 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				9227B5CB193EC1110006B213 /* MainStoryboard.storyboard */,
 				92F371C41941385100B99148 /* BlogPost.h */,
 				92F371C51941385100B99148 /* BlogPost.m */,
+				92C513F7194926E500C8AB96 /* THWebViewController.h */,
+				92C513F8194926E500C8AB96 /* THWebViewController.m */,
 			);
 			path = Bloggy;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				922FD5111943AA8600216D53 /* BlogPostsContainer.m in Sources */,
 				92F371C31941381C00B99148 /* TableViewController.m in Sources */,
 				92F371C61941385100B99148 /* BlogPost.m in Sources */,
+				92C513FA194926E500C8AB96 /* THWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

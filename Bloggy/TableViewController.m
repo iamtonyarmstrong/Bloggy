@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "BlogPostsContainer.h"
+#import "THWebViewController.h"
 #import "BlogPost.h"
 
 @interface TableViewController ()
@@ -30,8 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //_postsContainter = [[BlogPostsContainer alloc]init];
-    
+
+    self.title = @"Treehouse Blog Posts";
     self.individualPosts = [[[BlogPostsContainer alloc]init] returnedPosts:[BlogPostsContainer getPosts]];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -91,6 +92,13 @@
 }
 
 
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    BlogPost *p = [self.individualPosts objectAtIndex:indexPath.row];
+//
+//}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,7 +137,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -137,7 +145,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"openWebView"]){
+        THWebViewController *thWeb = [segue destinationViewController];
+        thWeb.blogPost = [self.individualPosts objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
+
 }
-*/
+
 
 @end
